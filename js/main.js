@@ -1,7 +1,8 @@
 'use strict';
 import '../scss/main.scss';
-import '../dist/main.bundle.css';
-
+//import '../dist/main.bundle.css';
+// require('../scss/main.scss');
+require('../dist/main.bundle.css')
 const Spinner = require('spin.js');
 import Common from './common';
 

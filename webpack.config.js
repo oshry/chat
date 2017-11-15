@@ -33,6 +33,10 @@ module.exports = {
         //     })
         // },
         {
+            test: /\.html$/,
+            loader: "html-loader"
+        },
+        {
             test: /\.css$/,
             use: [ 'style-loader', 'css-loader' ]
         },
@@ -42,6 +46,30 @@ module.exports = {
         }
     ]
 },
+    devServer: {
+        contentBase: path.join(__dirname, '/'),
+        compress: true,
+        port: 9000,
+        watchContentBase: true,
+        watchOptions: {
+            poll: true
+        },
+        historyApiFallback: true,
+        historyApiFallback: {
+            // rewrites: [
+            //     { from: /^\/tacos/, to: '/index.html' },
+            // ],
+            index: '/index.html',
+        },
+
+        proxy: {
+            "/tacos/bus": {
+                target: "http://localhost:9000",
+                pathRewrite: { '^/tacos': '' },
+            }
+        },
+
+    },
 plugins: [
     extractSass,
     new ExtractTextPlugin("main.bundle.css"),
