@@ -1,7 +1,18 @@
 'use strict';
 import '../scss/main.scss';
-//import '../dist/main.bundle.css';
+// import 'bootstrap/dist/css/boostrap.min.css';
+//import '../dist/css/bootstrap.min.css';
+// require('bootstrap');
+// require('bootstrap/dist/css/bootstrap.css');
+// require('font-awesome/css/font-awesome.css')
 // require('../scss/main.scss');
+// import jQuery from 'jquery';
+// import 'bootstrap';
+
+//$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+//@import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+require('bootstrap-loader');
+
 require('../dist/main.bundle.css')
 const Spinner = require('spin.js');
 import Common from './common';
@@ -66,6 +77,6 @@ class Main extends Common{
 export default Main;
 
 (()=> {
-    $(document).foundation();
+    // $(document).foundation();
     new Main();
 })();

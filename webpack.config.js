@@ -43,7 +43,9 @@ module.exports = {
         {
             test: /\.scss$/,
             loader: extractSass.extract(['css-loader','sass-loader'])
-        }
+        },
+        { test: /\.(woff2?|svg)$/, loader: 'url-loader?limit=10000' },
+        { test: /\.(ttf|eot)$/, loader: 'file-loader' },
     ]
 },
     devServer: {
@@ -62,17 +64,17 @@ module.exports = {
             index: '/index.html',
         },
 
-        proxy: {
-            "/tacos/bus": {
-                target: "http://localhost:9000",
-                pathRewrite: { '^/tacos': '' },
-            }
-        },
+        // proxy: {
+        //     "/tacos/bus": {
+        //         target: "http://localhost:9000",
+        //         pathRewrite: { '^/tacos': '' },
+        //     }
+        // },
 
     },
 plugins: [
     extractSass,
-    new ExtractTextPlugin("main.bundle.css"),
+    new ExtractTextPlugin("main.bundle.css")
 ],
     externals: {
         foundation: 'Foundation',
