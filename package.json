@@ -2,9 +2,9 @@
   "name": "bazar",
   "version": "1.0.1",
   "description": "",
-  "main": "./js/src/app.js",
+  "main": "./js/main.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors"
+    "start": "webpack-dev-server --progress --colors --watch"
   },
   "author": "Oshry Levy",
   "license": "MIT",

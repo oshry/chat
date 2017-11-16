@@ -1,9 +1,26 @@
-//@import 'basic';
-//@import '../dist/css/bootstrap.min.css';
-//$fa-font-path: "~font-awesome/fonts";
-//@import "~font-awesome/scss/font-awesome.scss";
-//$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-//@import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+/*
+
+NOT IN USE
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+.panel-primary {
+  border-color: #337ab7;
+  width: 1800px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 #messages{
   display:none;
 }
@@ -71,18 +88,6 @@
 }
 
 
-//header
-.panel-heading {
-  color: #fff;
-  background-color: #428bca;
-  border-color: #428bca;
-}
-.panel-heading {
-  padding: 10px 15px;
-  border-bottom: 1px solid transparent;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
 
 
 

@@ -40,10 +40,11 @@ module.exports = {
             test: /\.css$/,
             use: [ 'style-loader', 'css-loader' ]
         },
-        {
-            test: /\.scss$/,
-            loader: extractSass.extract(['css-loader','sass-loader'])
-        },
+        // {
+        //     test: /\.scss$/,
+        //     loader: extractSass.extract(['css-loader','sass-loader'])
+        // },
+
         { test: /\.(woff2?|svg)$/, loader: 'url-loader?limit=10000' },
         { test: /\.(ttf|eot)$/, loader: 'file-loader' },
     ]
@@ -73,8 +74,8 @@ module.exports = {
 
     },
 plugins: [
-    extractSass,
-    new ExtractTextPlugin("main.bundle.css")
+    // extractSass,
+    // new ExtractTextPlugin("main.bundle.css")
 ],
     externals: {
         foundation: 'Foundation',

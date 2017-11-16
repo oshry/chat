@@ -3,11 +3,11 @@
  */
 'use strict';
 import 'script-loader!jquery';
-import 'what-input';
-import 'foundation-sites';
+// import 'what-input';
+// import 'foundation-sites';
 
-import '../scss/_basic.scss';
-import '../scss/_settings.scss';
+// import '../scss/_basic.scss';
+// import '../scss/_settings.scss';
 
 
 module.exports = class Common{
